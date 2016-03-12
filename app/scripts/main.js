@@ -1,5 +1,7 @@
+'use strict';
+
 function getToken () {
-  return $("#githubToken").val();
+  return $('#githubToken').val();
 }
 
 function formatCollaborators (data) {
@@ -29,13 +31,13 @@ function interrogateGithub (project) {
           url: url,
           type: 'GET',
           dataType: 'json',
-          success: function(data, status, jqXHR) {
-              $(".results").append(format(project, data));
+          success: function(data) {
+              $('.results').append(format(project, data));
           },
           error: function(error) {
-            $(".alert").show();
+            $('.alert').show();
             console.error(error);
-            $(".alert").append(`<li>${project} - ${error.responseText}</li>`);
+            $('.alert').append(`<li>${project} - ${error.responseText}</li>`);
           },
           beforeSend: setHeader
         });
@@ -46,16 +48,16 @@ function filter (projects) {
 }
 
 function loadData () {
-  Papa.parse("data/projects.csv", { 
-    download: true, 
-    header: true, 
+  Papa.parse('data/projects.csv', {
+    download: true,
+    header: true,
     complete: function(projects) {
-      $(".results").empty();
-      $(".alert").hide();
-      $(".alert").empty();
+      $('.results').empty();
+      $('.alert').hide();
+      $('.alert').empty();
       _.each(filter(projects), interrogateGithub);
       // doStuff(filter(projects)[0]);
     }});
 }
 
-$(".generate").click(loadData);
+$('.generate').click(loadData);
