@@ -1,10 +1,11 @@
 {
-  "name": "github-contributors-graph",
+  "name": "github-contributors",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "papaparse": "^4.1.2"
+    "papaparse": "^4.1.2",
+    "lodash": "^4.6.1"
   },
   "overrides": {
     "bootstrap-sass": {

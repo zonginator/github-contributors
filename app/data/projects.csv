@@ -1,9 +1,9 @@
 Project
-AfzalivE/Android-GTFS-Reader
 CUTR-at-USF/HART-GTFS-realtimeGenerator
 CUTR-at-USF/RegionalTransitArchitecture
 CUTR-at-USF/gtfs-osm-sync
 CUTR-at-USF/gtfs-realtime-validator
+AfzalivE/Android-GTFS-Reader
 CanalTP/chaos-proto
 DianCom/GTFS
 DonTomika/binary-gtfs
@@ -52,7 +52,7 @@ dahlbys/GTFSimple
 darrkj/gtfs
 davidef/GTFS-OSM-Import
 devdsp/TransitVis
-djstroky/gtfs-sequelize
+evansiroky/gtfs-sequelize
 ed-g/gtfs-feed-archive
 fgcartographix/gtfsdb
 flibbertigibbet/patco-gtfs
