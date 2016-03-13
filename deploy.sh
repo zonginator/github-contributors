@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+if [ -z "DEPLOY_KEY" ] ; then
+  GIT_SSH_COMMAND='ssh -i $DEPLOY_KEY'
+fi
+
 BUILD_NUMBER=${SNAP_PIPELINE_COUNTER:-DEV}
 
 rm -rf deploy
