@@ -8,6 +8,8 @@ BUILD_NUMBER=${SNAP_PIPELINE_COUNTER:-DEV}
 
 rm -rf deploy
 
+echo $GIT_SSH_COMMAND
+
 git clone git@github.com:zonginator/zonginator.github.io.git deploy
 
 cp -r dist/* deploy
